@@ -207,12 +207,12 @@ with col2:
         else:
             # Empty state before prediction
             st.info("👈 Please enter the property specifications on the left, then click **Calculate Estimated Value** to see the AI prediction.")
-            st.image("https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
-                     caption="Data-Driven Real Estate Insights", width="stretch")
+            st.image("https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=100", 
+                     caption="Data-Driven Real Estate Insights", use_container_width=True)
 
 # Sidebar for additional info
 with st.sidebar:
-    st.image("https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", width="stretch")
+    st.image("https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=100", use_container_width=True)
     st.title("About the Model")
     st.info("""
     This application uses a Multiple Linear Regression model trained on USA housing data to predict property prices.
