@@ -1,5 +1,7 @@
 # Premium House Price Predictor 🏠
 
+**[Click here to view the live project!](https://house-price-estimator.streamlit.app)** (Example link, update if hosted elsewhere)
+
 A data-driven real estate valuation tool built with Streamlit and Scikit-Learn. It leverages a Multiple Linear Regression model trained on USA housing data to predict property prices based on various area specifications, complete with an instant currency conversion to INR.
 
 ## 🌟 Features
