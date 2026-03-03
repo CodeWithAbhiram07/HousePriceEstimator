@@ -207,7 +207,7 @@ with col2:
         else:
             # Empty state before prediction
             st.info("👈 Please enter the property specifications on the left, then click **Calculate Estimated Value** to see the AI prediction.")
-            st.image("https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=100", 
+            st.image("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=100", 
                      caption="Data-Driven Real Estate Insights", use_container_width=True)
 
 # Sidebar for additional info
