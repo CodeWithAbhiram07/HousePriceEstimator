@@ -1,14 +1,33 @@
-# Premium House Price Predictor 🏠
+# Premium Real Estate Evaluator 🏠✨
 
-**[Click here to view the live project!](https://house-price-estimator.streamlit.app)**
+**[Click here to view the live project!](https://house-price-estimator.streamlit.app)** *(Update this link after deploying via Streamlit Cloud)*
 
-A data-driven real estate valuation tool built with Streamlit and Scikit-Learn. It leverages a Multiple Linear Regression model trained on USA housing data to predict property prices based on various area specifications, complete with an instant currency conversion to INR.
+A modern, data-driven real estate valuation tool built with **Streamlit** and **Scikit-Learn**. This application features a premium UI design (including gradient headers, metric cards, and responsive columns) and leverages a Multiple Linear Regression model trained on USA housing data to predict property prices. It also provides instant dual-currency conversion (USD to INR).
 
 ## 🌟 Features
+- **Premium UI/UX:** A stunning, polished interface with custom CSS, gradient headers, and hover effects.
 - **AI-Powered Valuation:** Instantly estimates property values based on demographic and property data.
-- **Interactive UI:** A highly polished, premium Streamlit interface.
-- **Data Comparison:** Provides Altair-powered visual comparisons between your property and market averages.
-- **Dual Currency:** Displays estimated valuations in both USD ($) and INR (₹).
+- **Interactive Visualizations:** Provides Altair-powered visual comparisons between your property and market averages.
+- **Dual Currency Metrics:** Displays estimated valuations in both USD ($) and INR (₹).
+- **Professional Architecture:** Clean project structure separating data, assets, utilities, and the main app.
+
+## 📁 Project Structure
+
+```
+project-root
+│
+├── app.py                  # Main Streamlit application and UI
+├── requirements.txt        # Python dependencies
+├── README.md               # Project documentation
+│
+├── data
+│   └── USA_Housing.csv     # Training dataset
+│
+├── assets                  # Images used in the app
+│
+└── utils
+    └── prediction.py       # Model training and prediction logic
+```
 
 ## 🛠️ Tech Stack
 - **Python 3.x**
@@ -25,30 +44,15 @@ A data-driven real estate valuation tool built with Streamlit and Scikit-Learn. 
    cd HousePriceEstimator
    ```
 
-2. **Set up a virtual environment (Optional but Recommended):**
+2. **Install dependencies:**
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use: venv\Scripts\activate
+   pip install -r requirements.txt
    ```
 
-3. **Install dependencies:**
-   *(Ensure you have `streamlit`, `pandas`, `scikit-learn`, and `altair` installed.)*
-   ```bash
-   pip install streamlit pandas scikit-learn altair
-   ```
-
-4. **Run the Streamlit App:**
+3. **Run the Streamlit App:**
    ```bash
    streamlit run app.py
    ```
-
-## 📊 About the Model
-The application trains a **Multiple Linear Regression** model on startup using the `USA_Housing.csv` dataset. The features it considers are:
-- **Income**: Average income of residents in the area.
-- **House Age**: The age of the target house.
-- **Total Rooms**: The number of rooms in the property.
-- **Bedrooms**: The number of bedrooms.
-- **Population**: Total population of the surrounding area.
 
 ---
 > *Built with ❤️ using Streamlit & Scikit-Learn*

@@ -81,22 +81,18 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+from utils.prediction import load_and_train_model
+
 # 2. Data Loading and Model Training (Cached for performance)
 @st.cache_resource
-def load_and_train_model():
-    try:
-        df = pd.read_csv('USA_Housing.csv')
-        X = df[['Avg. Area Income', 'Avg. Area House Age', 'Avg. Area Number of Rooms',
-               'Avg. Area Number of Bedrooms', 'Area Population']]
-        y = df['Price']
-        model = LinearRegression()
-        model.fit(X, y)
-        return model, df
-    except FileNotFoundError:
-        st.error("Error: 'USA_Housing.csv' not found. Please ensure the file is in the correct directory.")
+def get_model():
+    model, df = load_and_train_model('data/USA_Housing.csv')
+    if model is None:
+        st.error("Error: 'data/USA_Housing.csv' not found. Please ensure the file exists.")
         st.stop()
+    return model, df
 
-model, df = load_and_train_model()
+model, df = get_model()
 EXCHANGE_RATE = 83.0 # Current estimate
 
 # 3. Web Interface
